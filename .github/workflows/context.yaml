@@ -7,4 +7,7 @@ jobs:
     steps:
     - name: github context
       run: echo '${{ toJSON(github)}}'
-      
+    - name: check github context
+      run: |
+        echo ${{ github.repository }}
+        ehco ${{ github.event_name }}
