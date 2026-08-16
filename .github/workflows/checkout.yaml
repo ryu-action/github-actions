@@ -1,0 +1,19 @@
+name: checkout
+on: workflow_dispatch
+
+jobs:
+  no-chekcout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check file list
+      run: cat README.md
+
+  chekcout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: use chekcout action
+      uses: actions/checkout@v4
+    - name: check file list
+      run: cat README.md
+
+
