@@ -12,4 +12,4 @@ jobs:
     - name: check matrix
       run: |
         echo ${{ matrix.os }}
-        ehco ${{ matrix.version }}
+        echo ${{ matrix.version }}
