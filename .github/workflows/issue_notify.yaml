@@ -36,9 +36,11 @@ jobs:
         environment: ["${{ needs.get-keyword.outputs.level }}"]
     environment: ${{ matrix.environment }}
     steps:
-    - name: slack 
+    - name: slack
       uses: slackapi/slack-github-action@v2
       with:
+        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+        webhook-type: incoming-webhook
         payload: |
           {
             "attachments": [
@@ -55,6 +57,3 @@ jobs:
               }
             ]
           }
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
