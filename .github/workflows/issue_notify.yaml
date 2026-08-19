@@ -37,7 +37,7 @@ jobs:
     environment: ${{ matrix.environment }}
     steps:
     - name: slack 
-      uses: slackapi/slack-github-action@v1.24.0
+      uses: slackapi/slack-github-action@v2
       with:
         payload: |
           {
