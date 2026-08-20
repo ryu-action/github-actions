@@ -15,7 +15,7 @@ iamIdentityMappings:
     
 managedNodeGroups:
   - name: managed-ng
-    instanceType: t3.medium
+    instanceType: t3.small
     minSize: 2
     maxSize: 2
     desiredCapacity: 2
