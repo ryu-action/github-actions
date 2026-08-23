@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v7
       with:
         repository: "ryu-action/github-actions-module"
-        path: ./acitons-module
+        path: ./actions-module
         ref: ${{ vars.VERSION }}
     - name: use test module
       uses: ./actions-module/common/test
