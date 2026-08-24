@@ -42,11 +42,6 @@ jobs:
         repository: "ryu-action/github-actions-module"
         path: ./actions-module
         ref: ${{ vars.VERSION }}
-    - name: debug module path
-      run: |
-        pwd
-        echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
-        find ./actions-module -maxdepth 3 -type f
     - name: use set-environment module
       uses: ./actions-module/common/set-environment
       id: set-env
